@@ -15,17 +15,23 @@ mvn compile exec:java -Dexec.mainClass="com.bootcamp.smarthome.Main"
 
 ## Project Structure
 
-```
+```    
 src/main/java/com/bootcamp/smarthome/
 ├── Main.java                    # Entry point and demo scenarios
 ├── controller/
 │   ├── CommandParser.java       # Parses command strings
 │   └── HomeController.java      # Manages registered devices
-└── device/
-    ├── Device.java              # Abstract base class
-    ├── SmartLight.java          # Dimmable light bulb
-    ├── SmartThermostat.java     # Programmable thermostat
-    └── SmartLock.java           # PIN-protected door lock
+├── device/
+│   ├── Device.java              # Abstract base class
+│   ├── SmartLight.java          # Dimmable light bulb
+│   ├── SmartThermostat.java     # Programmable thermostat
+│   └── SmartLock.java           # PIN-protected door lock
+└── exception/
+    ├── HomeAutomationException.java     # checked, base exception
+    ├── DeviceOfflineException.java      # checked
+    ├── InvalidCommandException.java     # checked
+    ├── InvalidValueException.java       # checked
+    └── DeviceNotFoundException.java     # unchecked
 ```
 
 ---
