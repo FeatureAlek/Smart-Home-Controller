@@ -1,0 +1,14 @@
+2026-07-01 16:49:30 WARN  c.b.s.controller.HomeController - Device 'LIGHT_03' is offline — command skipped.
+2026-07-01 16:49:30 ERROR c.b.s.controller.HomeController - Exception while processing command 'LOCK_02 UNLOCK' for device 'LOCK_02': PIN is null
+com.bootcamp.smarthome.exception.InvalidCommandException: PIN is null
+	at com.bootcamp.smarthome.device.SmartLock.validatePin(SmartLock.java:38)
+	at com.bootcamp.smarthome.device.SmartLock.executeCommand(SmartLock.java:58)
+	at com.bootcamp.smarthome.controller.HomeController.sendCommand(HomeController.java:97)
+	at com.bootcamp.smarthome.Main.main(Main.java:90)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.executeMainMethod(AbstractExecJavaBase.java:402)
+	at org.codehaus.mojo.exec.ExecJavaMojo.executeMainMethod(ExecJavaMojo.java:142)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.doExecClassLoader(AbstractExecJavaBase.java:377)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.lambda$execute$0(AbstractExecJavaBase.java:287)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
